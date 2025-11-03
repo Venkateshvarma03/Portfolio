@@ -2,14 +2,14 @@
 
 Personal portfolio website showcasing projects, skills, and achievements.
 
-## 🚀 Deployment on Render
+## 🚀 Deployment on Render (100% FREE Static Site)
 
-This project is configured to be deployed on Render. Follow these steps:
+This project is configured to be deployed as a **Static Site** on Render, which is **completely FREE** with no costs whatsoever!
 
 ### Prerequisites
 
 - A GitHub account
-- A Render account (sign up at https://render.com)
+- A Render account (sign up at https://render.com - completely free!)
 
 ### Deployment Steps
 
@@ -23,43 +23,40 @@ This project is configured to be deployed on Render. Follow these steps:
    git push -u origin main
    ```
 
-2. **Create a new Web Service on Render**
+2. **Create a new Static Site on Render**
    - Log in to your Render dashboard
-   - Click "New +" and select "Web Service"
-   - Connect your GitHub repository
-   - Render will auto-detect the configuration from `render.yaml`
-
-3. **Configure the service**
-   - Name: `portfolio` (or your preferred name)
-   - Region: Choose the closest region to your users
+   - Click "New +" and select **"Static Site"** (not Web Service!)
+   - Connect your GitHub repository: `Venkateshvarma03/Portfolio`
    - Branch: `main`
-   - Root Directory: Leave empty (or enter `/` if needed)
+
+3. **Configure the Static Site**
+   - Name: `portfolio` (or your preferred name)
+   - Build Command: **Leave empty** (no build needed for static HTML)
+   - Publish Directory: **Leave empty** (serves from root)
+   - Click "Create Static Site"
 
 4. **Deploy**
-   - Click "Create Web Service"
-   - Render will automatically build and deploy your site
+   - Render will automatically deploy your static site
    - You'll get a URL like `https://portfolio.onrender.com`
+   - ✅ **Completely FREE** - no credit card required!
 
-### Manual Configuration (if needed)
+### Why Static Site instead of Web Service?
 
-If you prefer not to use `render.yaml`, use these settings:
-
-- **Build Command**: `npm install`
-- **Start Command**: `npm start`
-- **Environment**: `Node`
+- **Static Sites are 100% FREE** on Render (no limits, no credits)
+- No server needed for your HTML/CSS/JS portfolio
+- Faster loading times
+- Perfect for portfolios, landing pages, and static websites
+- Web Services on free tier have usage limits and spin down after inactivity
 
 ## 🛠️ Local Development
 
-To run the project locally:
+To view the project locally:
 
 ```bash
-# Install dependencies
-npm install
-
-# Start the server
-npm start
-
-# Open http://localhost:3000 in your browser
+# Simply open index.html in your browser
+# Or use any local server like:
+python -m http.server 8000
+# Then open http://localhost:8000
 ```
 
 ## 📁 Project Structure
@@ -70,9 +67,8 @@ portfolio/
 ├── index.html       # Main HTML file
 ├── style.css        # Styles
 ├── script.js        # JavaScript
-├── server.js        # Express server
-├── package.json     # Dependencies
-└── render.yaml      # Render configuration
+├── package.json     # Project metadata
+└── .gitignore       # Git ignore rules
 ```
 
 ## 🔧 Technologies Used
@@ -80,8 +76,8 @@ portfolio/
 - HTML5
 - CSS3
 - JavaScript (jQuery)
-- Node.js
-- Express.js
+- Typed.js (typing animations)
+- Owl Carousel (carousel slider)
 
 ## 📝 License
 
